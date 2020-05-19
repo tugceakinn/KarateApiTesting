@@ -1,6 +1,6 @@
 Feature: sample karate test script
   Background:
-    * url 'https://jsonplaceholder.typicode.com'
+    * url apiURL
   Scenario: get all users and then get the first user by id
     Given path 'users'
     When method get
@@ -24,7 +24,7 @@ Feature: sample karate test script
     }
 }
 """
-    Given url 'https://jsonplaceholder.typicode.com/users'
+    Given url apiURL
     And request user
     When method post
     Then status 201
