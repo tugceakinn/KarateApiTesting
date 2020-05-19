@@ -1,6 +1,8 @@
 Feature: sample karate test script
   Background:
     * url apiURL
+
+
   Scenario: get all users and then get the first user by id
     Given path 'users'
     When method get
@@ -9,6 +11,8 @@ Feature: sample karate test script
     Given path 'users', first.id
     When method get
     Then status 200
+
+
   Scenario: create a user and then get it by id
     * def user =
 """
@@ -27,7 +31,7 @@ Feature: sample karate test script
     Given url apiURL
     And request user
     When method post
-    Then status 201
+    Then status 404
     * def id = response.id
     * print 'created id is: ' + id
     Given path id
