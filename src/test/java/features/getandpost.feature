@@ -1,8 +1,9 @@
 Feature: sample karate test script
   Background:
     * url apiURL
+    * header Accept = 'application/json'
 
-
+  @tag1
   Scenario: get all users and then get the first user by id
     Given path 'users'
     When method get
@@ -12,18 +13,18 @@ Feature: sample karate test script
     When method get
     Then status 200
 
-
+  @tag2
   Scenario: create a user and then get it by id
     * def user =
 """
 {
-    "name": "Test User",
-    "username": "testuser",
-    "email": "test@user.com",
+    "name": "Tugce Akin",
+    "username": "tugce",
+    "email": "tugce@user.com",
     "address": {
       "street": "Has No Name",
       "suite": "Apt. 123",
-      "city": "Electri",
+      "city": "Istanbul",
       "zipcode": "54321-6789"
     }
 }
