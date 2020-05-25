@@ -29,7 +29,7 @@ Feature: sample karate test script
       }
   }
   """
-      Given url https://jsonplaceholder.typicode.com/users
+      Given path 'users'
       And request user
       When method post
       Then status 201

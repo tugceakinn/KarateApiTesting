@@ -1,8 +1,10 @@
+#language:tr
 Feature: user Details
   Background:
+    * url apiURL2
     * header Accept = 'application/json'
 
-    @tag4
+    @tag6
     Scenario: create a user
     * def user =
     """
@@ -11,7 +13,6 @@ Feature: user Details
         "job": "doctor"
     }
     """
-    Given url https://reqres.in/api/users
     And request user
     When method post
     Then status 201

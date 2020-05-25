@@ -1,33 +1,15 @@
-Feature: post
+Feature: returned users
   Background:
-    * url apiURL
-    * header Accept = 'application/json'
+    * url 'https://gorest.co.in'
+    * header Authorization = 'Bearer CcQja8VrPLuWxOUAdQyrwtDGnF1_j9C6xxny'
 
-    @tag3
-    Scenario: create a user and then get it by id
-    * def user =
-    """
-      {
-          "name": "Tugce Akin",
-          "username": "tugce",
-          "email": "tugce@user.com",
-          "address": {
-            "street": "Has No Name",
-            "suite": "Apt. 123",
-            "city": "Istanbul",
-            "zipcode": "54321-6789"
-          }
-      }
-      """
-    Given path 'users'
-    And request user
-    When method post
-    Then status 201
+   @tag7
+   Scenario: Authorization ile user oluşturma
+     Given path '/public-api/users'
+     And param first_name = 'john'
+     And param status = 'inactive'
+     When method get
+     Then status 200
 
-    * def id = response.id
-    * print 'created id is: ' + id
-
-    Given path id
-          # When method get
-          # Then status 200
-          # And match response contains user
+     #And def userResponse = response
+     #Then match userResponse._meta.message == ["OK. Everything worked as expected."]
