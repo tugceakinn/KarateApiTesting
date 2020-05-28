@@ -2,15 +2,15 @@
 Feature: user Details
   Background:
     * url apiURL2
-    * header Accept = 'application/json'
+    * header Content-Type = 'application/json'
 
-    @tag6
+    @tag6 @post
     Scenario: create a user
     * def user =
     """
     {
         "name": "azra",
-        "job": "doctor"
+        "job": "student"
     }
     """
     And request user
