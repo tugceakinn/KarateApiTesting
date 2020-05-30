@@ -9,7 +9,7 @@ Feature: sample karate test script
       When method get
       Then status 200
       * def first = response[0]
-      Given path '/api/1.0/user'
+      Given path '/api/1.0/user/username'
       * print first
       When method get
       Then status 200
@@ -24,10 +24,48 @@ Feature: sample karate test script
           "email":"email@gmail",
           "password":"Tt123456.",
           "name":"tuğçe",
-          "surname":"akın"
-      }
+          "lastname":"akın"
+        }
         """
       Given path '/api/1.0/user'
       And request user
       When method post
       Then status 201
+
+     @tag11
+     Scenario: put user
+       * def user =
+       """
+        {
+          "username":"tugce",
+          "email":"email@gmail",
+          "password":"Tt123456.",
+          "name":"azra",
+          "lastname":"akın"
+        }
+
+       """
+       Given path '/api/1.0/user/tugce'
+       And request user
+       When method put
+       Then status 200
+
+     @tag12
+     Scenario: delete user
+       * def user =
+       """
+       {
+          "username":"tugce",
+          "email":"email@gmail",
+          "password":"Tt123456.",
+          "name":"azra",
+          "lastname":"akın"
+        }
+
+       """
+       Given path '/api/1.0/user/username'
+       And request user
+       When method delete
+       Then status 200
+
+

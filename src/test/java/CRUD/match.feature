@@ -5,10 +5,9 @@ Feature: sample karate test script
 
   @tag13
   Scenario: id si bir olanı karsilastir
-    Given path '/api/1.0/user'
+    Given path '/api/1.0/user/tugce'
     When method get
     Then status 200
-
 
     * def jsonResponse = read('user.json')
     * print jsonResponse

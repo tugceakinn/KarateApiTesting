@@ -4,7 +4,7 @@ Feature: sample karate test script
     * header Accept = 'application/json'
     * header Content-Type = 'application/json'
 
-    @tag12
+    @tag5
     Scenario: json ile okuduğum veriyi response karşılaştırması
       Given path 'users/1'
       When method get

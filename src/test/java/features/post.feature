@@ -4,7 +4,7 @@ Feature: user Details
     * url apiURL2
     * header Content-Type = 'application/json'
 
-    @tag6 @post
+    @tag3 @post
     Scenario: create a user
     * def user =
     """
@@ -16,5 +16,6 @@ Feature: user Details
     And request user
     When method post
     Then status 201
+
 
 
