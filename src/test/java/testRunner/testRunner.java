@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 @RunWith(Karate.class)
 @KarateOptions(features = "src/test/java/",
               // tags ={"@tag7,@get"}
-                  tags = "tag13"
+                  tags = "tag5"
 )
 public class testRunner {
 

@@ -5,7 +5,7 @@ Feature: sample karate test script
     * header Content-Type = 'application/json'
 
     @tag5
-    Scenario: json ile okuduğum veriyi response karşılaştırması
+    Scenario: json ile okunan veriyi response ile karsilastirma
       Given path 'users/1'
       When method get
       Then status 200
