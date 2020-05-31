@@ -4,7 +4,7 @@ Feature: sample karate test script
     * header Accept = 'application/json'
     * header Content-Type = 'application/json'
 
-    @tag5
+    @tag4
     Scenario: json ile okunan veriyi response ile karsilastirma
       Given path 'users/1'
       When method get
