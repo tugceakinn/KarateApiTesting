@@ -17,18 +17,25 @@ import org.apache.commons.io.FileUtils;
 import static org.junit.Assert.*;
 import org.junit.BeforeClass;
 import org.junit.Test;
-@KarateOptions(features = "src/test/java/"
+
+/*
+@KarateOptions(features = "src/test/java/",
                //tags ={"@tag7,@get"}
-                  //tags = "tag15"
+                  tags = "tag9"
 )
+*/
+
 public class testRunner {
 
 
     @Test
     public void testParallel() {
-        Results results = Runner.path("/Users/sahabt/Documents/Personal/KarateApiTesting/src/test/java/ParallelTests").tags("~@ignore").parallel(5);
-        assertTrue(results.getErrorMessages(), results.getFailCount() == 0);
+        Results results = Runner.path("/Users/sahabt/Desktop/KarateApiTesting/src/test/java/ParallelTests/").tags("~@ignore").
+                parallel(1);
+        //assertTrue(results.getErrorMessages(), results.getFailCount() == 0);
         generateReport(results.getReportDir());
+        //tags("~@ignore") -> feature ın içindeki bütün testleri aynı anda çalıştırır.
+        //Raporlama yapmaya yarıyor.
     }
 
     public static void generateReport(String karateOutputPath) {

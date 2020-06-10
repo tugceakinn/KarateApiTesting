@@ -20,11 +20,11 @@ Feature: sample karate test script
       * def user =
       """
         {
-          "username":"bilal",
+          "username":"tugce",
           "email":"email@gmail",
           "password":"Tt123456.",
-          "name":"tuğçe",
-          "lastname":"akın"
+          "name":"tugce",
+          "lastname":"akin"
         }
         """
       Given path '/api/1.0/user'
@@ -40,8 +40,8 @@ Feature: sample karate test script
           "username":"tugce",
           "email":"email@gmail",
           "password":"Tt123456.",
-          "name":"azra",
-          "lastname":"akın"
+          "name":"tugce",
+          "lastname":"sahin"
         }
 
        """
@@ -58,8 +58,8 @@ Feature: sample karate test script
           "username":"tugce",
           "email":"email@gmail",
           "password":"Tt123456.",
-          "name":"azra",
-          "lastname":"akın"
+          "name":"tugce",
+          "lastname":"sahin"
         }
 
        """

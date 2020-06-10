@@ -3,7 +3,7 @@ Feature: returned users
     * url 'https://gorest.co.in'
     * header Authorization = 'Bearer CcQja8VrPLuWxOUAdQyrwtDGnF1_j9C6xxny'
 
-   @tag5 @post
+   @tag5
    Scenario: Yetki isteyen api için user oluşturma
      Given path '/public-api/users'
      And param first_name = 'john'
