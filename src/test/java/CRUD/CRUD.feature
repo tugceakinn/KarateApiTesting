@@ -49,6 +49,7 @@ Feature: sample karate test script
        When method put
        Then status 200
 
+
      @tag12
      Scenario: delete user
        * def user =
