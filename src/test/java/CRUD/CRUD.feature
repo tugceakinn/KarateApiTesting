@@ -14,7 +14,6 @@ Feature: sample karate test script
       When method get
       Then status 200
 
-
     @tag10 @post
     Scenario: create a user and then get it by id
       * def user =
